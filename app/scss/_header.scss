@@ -25,7 +25,15 @@
     &__links {
         a {
             font-size: $font-md;
+            color: $gray;
+            font-weight: 500;
+
         }
+    }
+
+    &__cta {
+        font-size: $font-md;
+        color: $white;
     }
 
 }
