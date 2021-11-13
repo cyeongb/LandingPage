@@ -60,9 +60,19 @@ button,
 
 //visability
 .hide-for-mobile {
-    //hide for tablet and mobile
+    //hide for mobile 모바일을 위해 pc ui를 숨김처리
+
+    //max width가 1023px
+    @include breakpoint-down(medium) {
+        display: none;
+    }
 }
 
 .hide-for-desktop {
+
+    //pc화면을 위해 모바일 ui를 숨김처리
     //hide for desktop viewport widths
+    @include breakpoint-up(large) {
+        display: none;
+    }
 }

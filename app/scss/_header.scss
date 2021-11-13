@@ -4,7 +4,9 @@
     }
 
     &__logo {
-        img {}
+        img {
+            width: 9rem;
+        }
     }
 
     &__menu {
@@ -27,6 +29,10 @@
             font-size: $font-md;
             color: $gray;
             font-weight: 500;
+
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
 
         }
     }

@@ -63,14 +63,34 @@ button,
   cursor: pointer;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 .header nav {
   padding: 24px;
+}
+
+.header__logo img {
+  width: 9rem;
 }
 
 .header__links a {
   font-size: 1.125rem;
   color: #666363;
   font-weight: 500;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
 }
 
 .header__cta {
