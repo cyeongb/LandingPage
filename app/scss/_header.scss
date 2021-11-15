@@ -1,11 +1,12 @@
 .header {
     nav {
-        padding: 24px;
+        padding: 1.0625rem 1.5rem;
     }
 
     &__logo {
         img {
             width: 9rem;
+            height: 1.75rem;
         }
     }
 
@@ -25,13 +26,39 @@
     }
 
     &__links {
+
         a {
             font-size: $font-md;
             color: $gray;
             font-weight: 500;
+            transition: color 300ms ease-in-out;
+            position: relative;
 
             &:not(:last-child) {
                 margin-right: 32px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 5px;
+                left: 0;
+                right: 0;
+                bottom: -34px;
+                background: linear-gradient(to right, $violet, $darkViolet);
+                // transition을 적용하기위해 opacity로 숨김처리.
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+
+            }
+
+            &:hover {
+                color: $violet;
+
+                &::before {
+                    opacity: 1;
+                }
             }
 
         }
@@ -40,6 +67,12 @@
     &__cta {
         font-size: $font-md;
         color: $white;
+
+        transition: opacity 300ms ease-in-out;
+
+        &:hover {
+            opacity: 0.75;
+        }
     }
 
 }
