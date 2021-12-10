@@ -10,28 +10,9 @@
         }
     }
 
-    &__menu {
-
-        // 기존 소스 햄버거 메뉴
-        //mobile menu_yt
-        span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: $darkViolet;
-            transition: all 300ms ease-in-out;
-            transform-origin: 2.5px 1px;
-
-            &:not(:last-child) {
-                margin-bottom: 5px;
-            }
-        }
-
-        // img {
-        //     width: 2rem;
-        // }
-
-        &.open {
+    // hamburger menu open style
+    &.open {
+        .header__toggle {
             >span:first-child {
                 transform: rotate(45deg);
             }
@@ -46,27 +27,70 @@
         }
     }
 
+    //mobile menu background
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 4.25rem;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-image: linear-gradient($darkGray, transparent);
+    }
+
+    //mobile menu toggle button
+    &__toggle {
+        span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: $darkViolet;
+            transition: all 300ms ease-in-out;
+            transform-origin: 2.5px 1px;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    // mobile menu
+    &__menu {
+        background: $white;
+        padding: 1.625rem;
+
+        a {
+            display: block;
+            padding: 0.625rem;
+            color: $gray;
+            text-align: center;
+            font-size: $font-md;
+            font-weight: 500;
+        }
+    }
+
+    //desktop menu
     &__links {
 
         a {
-            font-size: $font-md;
+            position: relative;
             color: $gray;
+            font-size: $font-md;
             font-weight: 500;
             transition: color 300ms ease-in-out;
-            position: relative;
 
             &:not(:last-child) {
                 margin-right: 32px;
             }
 
             &::before {
-                content: "";
                 position: absolute;
                 display: block;
                 height: 5px;
                 left: 0;
                 right: 0;
                 bottom: -34px;
+                content: "";
                 background: linear-gradient(to right, $violet, $darkViolet);
                 // transition을 적용하기위해 opacity로 숨김처리.
                 opacity: 0;
@@ -85,10 +109,10 @@
         }
     }
 
+    //desktop menu button
     &__cta {
         font-size: $font-md;
         color: $white;
-
         transition: opacity 300ms ease-in-out;
 
         &:hover {

@@ -1,11 +1,19 @@
 const btnHamburger = document.querySelector("#btnHamburger");
 
-btnHamburger.addEventListener("click", function () {
-  console.log("hamburger menu click");
+const header = document.querySelector(".header");
 
-  if (btnHamburger.classList.contains("open")) {
-    btnHamburger.classList.remove("open");
+const overlay = document.querySelector(".overlay");
+
+btnHamburger.addEventListener("click", function () {
+  if (header.classList.contains("open")) {
+    //close menu toggle
+    header.classList.remove("open");
+    overlay.classList.remove("fade-in");
+    overlay.classList.add("fade-out");
   } else {
-    btnHamburger.classList.add("open");
+    //open menu toggle
+    header.classList.add("open");
+    overlay.classList.remove("fade-out");
+    overlay.classList.add("fade-in");
   }
 });

@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
   line-height: 1.3;
   font-family: 'Roboto Condensed', 'Noto Sans KR', sans-serif;
   font-weight: 300;
@@ -54,12 +54,12 @@ a:hover {
 button,
 .button {
   padding: 1rem 3rem;
-  background: -webkit-gradient(linear, left top, right top, from(#680DC2), to(#290B68));
-  background: linear-gradient(to right, #680DC2, #290B68);
   border: 0;
+  border-radius: 30px;
   color: #ffffff;
   font-weight: 400;
-  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#680DC2), to(#290B68));
+  background: linear-gradient(to right, #680DC2, #290B68);
   cursor: pointer;
 }
 
@@ -84,7 +84,32 @@ button,
   height: 1.75rem;
 }
 
-.header__menu span {
+.header.open .header__toggle > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__toggle > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 4.25rem;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3F3C3C), to(transparent));
+  background-image: linear-gradient(#3F3C3C, transparent);
+}
+
+.header__toggle span {
   display: block;
   width: 28px;
   height: 3px;
@@ -95,31 +120,31 @@ button,
           transform-origin: 2.5px 1px;
 }
 
-.header__menu span:not(:last-child) {
+.header__toggle span:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.header__menu.open > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.header__menu {
+  background: #ffffff;
+  padding: 1.625rem;
 }
 
-.header__menu.open > span:nth-child(2) {
-  opacity: 0;
-}
-
-.header__menu.open > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.header__menu a {
+  display: block;
+  padding: 0.625rem;
+  color: #666363;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .header__links a {
-  font-size: 1.125rem;
+  position: relative;
   color: #666363;
+  font-size: 1.125rem;
   font-weight: 500;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
-  position: relative;
 }
 
 .header__links a:not(:last-child) {
@@ -127,13 +152,13 @@ button,
 }
 
 .header__links a::before {
-  content: "";
   position: absolute;
   display: block;
   height: 5px;
   left: 0;
   right: 0;
   bottom: -34px;
+  content: "";
   background: -webkit-gradient(linear, left top, right top, from(#680DC2), to(#290B68));
   background: linear-gradient(to right, #680DC2, #290B68);
   opacity: 0;
@@ -158,5 +183,75 @@ button,
 
 .header__cta:hover {
   opacity: 0.75;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 400ms ease-in-out forwards;
+          animation: fade-out 400ms ease-in-out forwards;
 }
 /*# sourceMappingURL=style.css.map */
