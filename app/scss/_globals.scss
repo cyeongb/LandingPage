@@ -17,6 +17,10 @@ body {
     font-weight: 300;
     font-size: $font-md;
     color: #666363;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 }
 
 //a tag

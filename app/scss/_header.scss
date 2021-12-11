@@ -2,6 +2,8 @@
     nav {
         padding-top: 1.0625rem;
         padding-bottom: 1.0625rem;
+        position: relative;
+        background: $white;
     }
 
 
@@ -34,7 +36,7 @@
         opacity: 0;
         visibility: hidden;
         position: fixed;
-        top: 4.25rem;
+        top: 0px;
         right: 0px;
         bottom: 0px;
         left: 0px;

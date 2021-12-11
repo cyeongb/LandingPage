@@ -21,6 +21,10 @@ body {
   color: #666363;
 }
 
+body.noscroll {
+  overflow: hidden;
+}
+
 a,
 a:visited,
 a:hover {
@@ -83,6 +87,8 @@ button,
 .header nav {
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
+  position: relative;
+  background: #ffffff;
 }
 
 .header__logo img {
@@ -108,7 +114,7 @@ button,
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  top: 4.25rem;
+  top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -213,6 +219,7 @@ button,
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -227,13 +234,14 @@ button,
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
 
 .fade-in {
-  -webkit-animation: fade-in 300ms ease-in-out forwards;
-          animation: fade-in 300ms ease-in-out forwards;
+  -webkit-animation: fade-in 250ms ease-in-out forwards;
+          animation: fade-in 250ms ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {
@@ -267,7 +275,7 @@ button,
 }
 
 .fade-out {
-  -webkit-animation: fade-out 400ms ease-in-out forwards;
-          animation: fade-out 400ms ease-in-out forwards;
+  -webkit-animation: fade-out 250ms ease-in-out forwards;
+          animation: fade-out 250ms ease-in-out forwards;
 }
 /*# sourceMappingURL=style.css.map */
