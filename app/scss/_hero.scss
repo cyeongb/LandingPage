@@ -1,0 +1,9 @@
+.hero {
+    &__image {
+        background-image: url('/images/easybank_back_img_mobile.svg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &__text {}
+}
