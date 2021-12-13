@@ -1,8 +1,30 @@
 .hero {
+    // background: red;
+    // background-image: url(https://itshowke.com/wp-content/uploads/2021/01/153-768x421.png);
+    // background-repeat: repeat;
+    // background-size: cover;
+    // background-position: center center;
+    // height: 17.5rem;
+    // width: 17rem;
+    // background: red;
+    background: url('../images/easybank_back_img_mobile_2.jpg');
+
+    // background: red;
+
     &__image {
-        background-image: url('/images/easybank_back_img_mobile.svg') no-repeat;
+
+        // background: url('/images/easybank_back_img_mobile_2.png');
+        // background: blue;
+        // position: relative;
+        // background: no-repeat center url('/images/easybank_back_img_mobile_2.png');
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        height: 17.5rem;
+        width: 17rem;
+
+
+
     }
 
     &__text {}

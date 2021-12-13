@@ -205,6 +205,18 @@ button,
   opacity: 0.75;
 }
 
+.hero {
+  background: url("../images/easybank_back_img_mobile_2.jpg");
+}
+
+.hero__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 17.5rem;
+  width: 17rem;
+}
+
 .has-fade {
   visibility: hidden;
 }
