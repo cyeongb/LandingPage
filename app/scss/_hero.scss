@@ -1,16 +1,46 @@
 .hero {
-    position: absolute;
 
     &__image {
-
-        background: url('../../images/easybank_back_mobile.png');
+        background: url('../../images/easybank_back_without_phone.png');
         position: relative;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center center;
-        height: 28rem;
-        width: 31rem;
+        min-height: 29rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url('../../images/easybank_mobile_image_small.png');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center 18rem;
+            height: 100%;
+            width: 100%;
+        }
     }
 
-    &__text {}
+    &__text {
+        text-align: center;
+
+        h1 {
+            font-weight: bold;
+            color: $black;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+
+            b {
+                font-size: 2.7rem;
+                color: $violet;
+                font-weight: bolder;
+            }
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+
+        }
+    }
 }

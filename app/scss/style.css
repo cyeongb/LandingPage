@@ -31,6 +31,15 @@ a:hover {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+}
+
 .container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -205,18 +214,47 @@ button,
   opacity: 0.75;
 }
 
-.hero {
-  position: absolute;
-}
-
 .hero__image {
-  background: url("../../images/easybank_back_mobile.png");
+  background: url("../../images/easybank_back_without_phone.png");
   position: relative;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
-  height: 28rem;
-  width: 31rem;
+  min-height: 29rem;
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  background: url("../../images/easybank_mobile_image_small.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 18rem;
+  height: 100%;
+  width: 100%;
+}
+
+.hero__text {
+  text-align: center;
+}
+
+.hero__text h1 {
+  font-weight: bold;
+  color: #000000;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.hero__text h1 b {
+  font-size: 2.7rem;
+  color: #680DC2;
+  font-weight: bolder;
+}
+
+.hero__text p {
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
 }
 
 .has-fade {
