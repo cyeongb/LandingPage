@@ -41,8 +41,10 @@ h6 {
 }
 
 .container {
-  padding-left: 1.5rem;
+  padding-top: 2rem;
   padding-right: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -79,6 +81,15 @@ button,
   background: -webkit-gradient(linear, left top, right top, from(#680DC2), to(#290B68));
   background: linear-gradient(to right, #680DC2, #290B68);
   cursor: pointer;
+  font-size: 1.125rem;
+  color: #ffffff;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+button:hover,
+.button:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 63.9375em) {
@@ -203,24 +214,40 @@ button,
   opacity: 1;
 }
 
-.header__cta {
-  font-size: 1.125rem;
-  color: #ffffff;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
-}
-
-.header__cta:hover {
-  opacity: 0.75;
+@media (min-width: 64em) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .hero__image {
   background: url("../../images/easybank_back_without_phone.png");
   position: relative;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 80%;
   background-position: center center;
-  min-height: 29rem;
+  min-height: 32rem;
+}
+
+@media (min-width: 64em) {
+  .hero__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 35rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    background: url("../../images/easybank_back_pc.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
 }
 
 .hero__image::before {
@@ -229,7 +256,7 @@ button,
   background: url("../../images/easybank_mobile_image_small.png");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: center 18rem;
+  background-position: center 20rem;
   height: 100%;
   width: 100%;
 }
@@ -254,7 +281,7 @@ button,
 
 .hero__text p {
   line-height: 1.8;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .has-fade {

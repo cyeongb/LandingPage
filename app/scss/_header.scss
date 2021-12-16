@@ -119,16 +119,4 @@
 
         }
     }
-
-    //desktop menu button
-    &__cta {
-        font-size: $font-md;
-        color: $white;
-        transition: opacity 300ms ease-in-out;
-
-        &:hover {
-            opacity: 0.75;
-        }
-    }
-
 }

@@ -43,8 +43,10 @@ h6 {
 
 // spacing - mobile
 .container {
-    padding-left: 1.5rem;
+    padding-top: 2rem;
     padding-right: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
 }
 
 
@@ -77,6 +79,14 @@ button,
     font-weight: 400;
     background: linear-gradient(to right, $violet, $darkViolet);
     cursor: pointer;
+    font-size: $font-md;
+    color: $white;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
 }
 
 //visability

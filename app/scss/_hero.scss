@@ -1,12 +1,29 @@
 .hero {
 
+    @include breakpoint-up(large) {
+        display: flex;
+        align-items: center;
+    }
+
+
     &__image {
         background: url('../../images/easybank_back_without_phone.png');
         position: relative;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: 80%;
         background-position: center center;
-        min-height: 29rem;
+        min-height: 32rem;
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            height: 35rem;
+            order: 2;
+            background: url('../../images/easybank_back_pc.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+
+        }
 
         &::before {
             content: "";
@@ -14,7 +31,7 @@
             background: url('../../images/easybank_mobile_image_small.png');
             background-repeat: no-repeat;
             background-size: auto;
-            background-position: center 18rem;
+            background-position: center 20rem;
             height: 100%;
             width: 100%;
         }
@@ -39,7 +56,7 @@
 
         p {
             line-height: 1.8;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
 
         }
     }
