@@ -43,10 +43,48 @@ h6 {
 
 // spacing - mobile
 .container {
-    padding-top: 2rem;
-    padding-right: 1.5rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
+
+    margin: 0 auto;
+    max-width: 100rem;
+
+    // helper class
+
+    &--pall {
+        padding-top: 2rem;
+        padding-right: 1.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1.5rem;
+    }
+
+    &--py {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+    }
+
+    &--px {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+
+    }
+
+    &--pr {
+        padding-right: 1.5rem;
+    }
+
+    &--pt {
+        padding-top: 2rem;
+    }
+
+    &--pb {
+        padding-bottom: 2rem;
+    }
+
+    &--pl {
+        padding-left: 1.5rem;
+
+    }
+
 }
 
 

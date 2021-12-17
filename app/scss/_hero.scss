@@ -1,8 +1,12 @@
 .hero {
+    background: $verylightGrayViolet;
 
-    @include breakpoint-up(large) {
-        display: flex;
-        align-items: center;
+    .container {
+
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+        }
     }
 
 
@@ -13,9 +17,26 @@
         background-size: 80%;
         background-position: center center;
         min-height: 32rem;
+        left: 4%;
+
+        @include breakpoint-down(medium) {
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url('../../images/easybank_mobile_image_small.png');
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-position: center 20rem;
+                height: 100%;
+                width: 100%;
+            }
+
+        }
 
         @include breakpoint-up(large) {
-            flex: 1;
+
+            flex: 3;
             height: 35rem;
             order: 2;
             background: url('../../images/easybank_back_pc.png');
@@ -25,32 +46,39 @@
 
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            background: url('../../images/easybank_mobile_image_small.png');
-            background-repeat: no-repeat;
-            background-size: auto;
-            background-position: center 20rem;
-            height: 100%;
-            width: 100%;
-        }
+
     }
 
     &__text {
         text-align: center;
 
+        @include breakpoint-up(large) {
+            flex: 2; // parent의 공간 중 2 만큼을 배분한다는 뜻
+            order: 1;
+            text-align: left;
+        }
+
         h1 {
             font-weight: bold;
             color: $black;
-            font-size: 2.5rem;
+            font-size: $font-lg;
             line-height: 1.1;
             margin-bottom: 2rem;
 
+            @include breakpoint-up(large) {
+                font-size: $font-xlg;
+
+            }
+
             b {
-                font-size: 2.7rem;
+                font-size: $font-lg;
                 color: $violet;
                 font-weight: bolder;
+
+                @include breakpoint-up(large) {
+                    font-size: $font-xlg;
+
+                }
             }
         }
 
@@ -58,6 +86,9 @@
             line-height: 1.8;
             margin-bottom: 2rem;
 
+            @include breakpoint-up(large) {
+                font-size: $font-mdlg;
+            }
         }
     }
 }
