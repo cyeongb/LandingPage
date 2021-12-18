@@ -246,7 +246,7 @@ button:hover,
 }
 
 .hero {
-  background: #ebe8ee;
+  background: #f4f2f8;
 }
 
 @media (min-width: 64em) {
@@ -261,26 +261,13 @@ button:hover,
 }
 
 .hero__image {
-  background: url("../../images/easybank_back_without_phone.png");
+  background: url("../../images/easybank_back_mobile.png");
   position: relative;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 65%;
   background-position: center center;
-  min-height: 32rem;
-  left: 4%;
-}
-
-@media (max-width: 63.9375em) {
-  .hero__image::before {
-    content: "";
-    position: absolute;
-    background: url("../../images/easybank_mobile_image_small.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center 20rem;
-    height: 100%;
-    width: 100%;
-  }
+  min-height: 38rem;
+  right: 3%;
 }
 
 @media (min-width: 64em) {
@@ -296,6 +283,7 @@ button:hover,
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    left: 3%;
   }
 }
 
@@ -325,7 +313,7 @@ button:hover,
 
 @media (min-width: 64em) {
   .hero__text h1 {
-    font-size: 3.25rem;
+    font-size: 3rem;
   }
 }
 
@@ -337,7 +325,7 @@ button:hover,
 
 @media (min-width: 64em) {
   .hero__text h1 b {
-    font-size: 3.25rem;
+    font-size: 3rem;
   }
 }
 
@@ -348,7 +336,7 @@ button:hover,
 
 @media (min-width: 64em) {
   .hero__text p {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
   }
 }
 

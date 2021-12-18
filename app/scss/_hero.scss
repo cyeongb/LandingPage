@@ -11,25 +11,19 @@
 
 
     &__image {
-        background: url('../../images/easybank_back_without_phone.png');
+        background: url('../../images/easybank_back_mobile.png');
         position: relative;
         background-repeat: no-repeat;
-        background-size: 80%;
+        background-size: 65%;
         background-position: center center;
-        min-height: 32rem;
-        left: 4%;
+        min-height: 38rem;
+        right: 3%;
 
         @include breakpoint-down(medium) {
 
             &::before {
-                content: "";
-                position: absolute;
-                background: url('../../images/easybank_mobile_image_small.png');
-                background-repeat: no-repeat;
-                background-size: auto;
-                background-position: center 20rem;
-                height: 100%;
-                width: 100%;
+                // content: "";
+   // position: absolute;
             }
 
         }
@@ -43,6 +37,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
+            left: 3%;
 
         }
 
@@ -87,7 +82,7 @@
             margin-bottom: 2rem;
 
             @include breakpoint-up(large) {
-                font-size: $font-mdlg;
+                font-size: $font-md;
             }
         }
     }
