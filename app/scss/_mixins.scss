@@ -13,6 +13,7 @@ $breakpoints-down:("small":"39.9375em", "medium" : "63.9375em", "large" : "87.43
 
 //mixins 여러 컴포넌트간에 공통으로 사용하고있는 기능을 재사용하는 방법. 
 // breakpoint-up : desktop 에 적용할 때
+// medium : tablet
 @mixin breakpoint-up($size) {
     @media(min-width:map-get($breakpoints-up, $size)) {
         @content;

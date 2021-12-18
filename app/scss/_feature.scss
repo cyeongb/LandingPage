@@ -1,17 +1,29 @@
 .feature {
     &__grid {
-        @include breakpoint-up(large) {
+        @include breakpoint-up(medium) {
             display: flex;
+            flex-wrap: wrap;
         }
     }
 
     &__item {
+        padding: 1rem;
+
+        @include breakpoint-up(medium) {
+            flex: 1 0 50%;
+
+        }
+
         @include breakpoint-up(large) {
             flex: 1;
         }
     }
 
-    &__icon {}
+    &__icon {
+        img {
+            width: 3.5rem;
+        }
+    }
 
     &__title {}
 
