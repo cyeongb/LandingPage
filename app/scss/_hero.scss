@@ -52,38 +52,5 @@
             order: 1;
             text-align: left;
         }
-
-        h1 {
-            font-weight: bold;
-            color: $black;
-            font-size: $font-lg;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-
-            @include breakpoint-up(large) {
-                font-size: $font-xlg;
-
-            }
-
-            b {
-                font-size: $font-lg;
-                color: $violet;
-                font-weight: bolder;
-
-                @include breakpoint-up(large) {
-                    font-size: $font-xlg;
-
-                }
-            }
-        }
-
-        p {
-            line-height: 1.8;
-            margin-bottom: 2rem;
-
-            @include breakpoint-up(large) {
-                font-size: $font-md;
-            }
-        }
     }
 }

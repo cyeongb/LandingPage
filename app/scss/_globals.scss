@@ -17,6 +17,7 @@ body {
     font-weight: 300;
     font-size: $font-md;
     color: #666363;
+    min-height: 270vh;
 
     &.noscroll {
         overflow: hidden;
@@ -31,15 +32,57 @@ a:hover {
 
 }
 
-
+// text
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    color: $black;
+    font-weight: bold;
     margin-top: 0px;
+    margin-bottom: 2rem;
+
 }
+
+h1 {
+    font-size: $font-lg;
+    line-height: 1.1;
+
+    @include breakpoint-up(large) {
+        font-size: $font-xlg;
+
+    }
+
+    b {
+        font-size: $font-lg;
+        color: $violet;
+        font-weight: bolder;
+
+        @include breakpoint-up(large) {
+            font-size: $font-xlg;
+
+        }
+    }
+}
+
+h2 {
+    font-size: $font-mdslg;
+
+    @include breakpoint-up(large) {
+        font-size: $font-mdxlg;
+    }
+}
+
+
+//p tag
+
+p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
 
 // spacing - mobile
 .container {
