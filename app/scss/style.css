@@ -413,4 +413,20 @@ button:hover,
   -webkit-animation: fade-out 250ms ease-in-out forwards;
           animation: fade-out 250ms ease-in-out forwards;
 }
+
+@media (min-width: 64em) {
+  .feature__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 64em) {
+  .feature__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */
