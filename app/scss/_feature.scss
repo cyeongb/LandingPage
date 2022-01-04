@@ -1,4 +1,7 @@
 .feature {
+    background: $veryLightGray;
+    text-align: left;
+
     &__intro {
         margin-bottom: 3.75rem;
 
@@ -68,6 +71,7 @@
 
     &__desc {
         font-size: $font-sm;
+        line-height: 1.5;
         color: $lightGray;
 
         @include breakpoint-up(medium) {

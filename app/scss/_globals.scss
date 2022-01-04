@@ -93,15 +93,27 @@ p {
     // helper class
 
     &--pall {
-        padding-top: 2rem;
+        padding-top: 4.375rem;
         padding-right: 1.5rem;
-        padding-bottom: 2rem;
+        padding-bottom: 4.375rem;
         padding-left: 1.5rem;
+
+        @include breakpoint-up(large) {
+            // desk-top
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
     }
 
     &--py {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+
+        @include breakpoint-up(large) {
+            // desk-top
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
 
     }
 
@@ -116,11 +128,21 @@ p {
     }
 
     &--pt {
-        padding-top: 2rem;
+        padding-top: 4.375rem;
+
+        @include breakpoint-up(large) {
+            // desk-top
+            padding-top: 6rem;
+        }
     }
 
     &--pb {
-        padding-bottom: 2rem;
+        padding-bottom: 4.375rem;
+
+        @include breakpoint-up(large) {
+            // desk-top
+            padding-bottom: 6rem;
+        }
     }
 
     &--pl {
