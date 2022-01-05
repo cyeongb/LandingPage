@@ -553,21 +553,7 @@ button:hover,
 .article__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-}
-
-@media (min-width: 40em) {
-  .article__grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 64em) {
-  .article__grid {
-    -ms-grid-columns: repeat 4, 1fr;
-        grid-template-columns: repeat 4, 1fr;
-  }
+  -ms-grid-columns: (minmax(18.75rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
 }
 /*# sourceMappingURL=style.css.map */
