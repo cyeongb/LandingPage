@@ -552,6 +552,8 @@ button:hover,
 
 .article__content__subtitle {
   margin-bottom: 4rem;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
 .article__grid {
@@ -589,6 +591,13 @@ button:hover,
   border-radius: 3.125rem;
 }
 
+.article__image:hover {
+  -webkit-box-shadow: 0 0 0 3px #680DC2 inset;
+          box-shadow: 0 0 0 3px #680DC2 inset;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
 .article__text {
   padding: 1.5rem 1.5rem 2.5rem 1.5rem;
   text-align: left;
@@ -596,7 +605,7 @@ button:hover,
 
 @media (min-width: 40em) {
   .article__text {
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 2.5rem 1.5rem 1.2rem;
   }
 }
 
@@ -605,11 +614,23 @@ button:hover,
   color: #B08FE5;
 }
 
+.article__author:hover {
+  color: #680DC2;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
 .article__title {
   font-size: 1.875rem;
   line-height: 1.15;
   color: #3F3C3C;
   padding: 0.3rem 0 1rem 0;
+}
+
+.article__title:hover {
+  color: #680DC2;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .article__desc {

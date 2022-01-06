@@ -6,6 +6,7 @@
     &__content {
         &__subtitle {
             margin-bottom: 4rem;
+            transition: all 300ms ease-out;
         }
     }
 
@@ -35,6 +36,7 @@
         // margin: 1rem;
         border-radius: 0.4rem;
         overflow: hidden;
+
     }
 
     &__image {
@@ -46,13 +48,20 @@
         border-radius: 3.125rem;
     }
 
+    &__image:hover {
+        box-shadow: 0 0 0 3px $violet inset;
+        transition: all 300ms ease-in-out;
+        // box-shadow : x축 , y축 , spread 정도 rgba(검은색 (0), opacity(20%))
+
+    }
+
     &__text {
         //mobile
         padding: 1.5rem 1.5rem 2.5rem 1.5rem;
 
         //tablet
         @include breakpoint-up(medium) {
-            padding: 1.5rem 2.5rem;
+            padding: 1.5rem 2.5rem 1.5rem 1.2rem;
         }
 
         // color:gray;
@@ -64,12 +73,25 @@
         color: $lightViolet;
     }
 
+    &__author:hover {
+        color: $violet;
+        transition: all 300ms ease-in-out;
+    }
+
+
+
     &__title {
         font-size: $font-mdslg;
         line-height: 1.15;
         //line-height: 1을 원래사이즈  기준으로 함.
         color: $darkGray;
         padding: 0.3rem 0 1rem 0;
+    }
+
+    &__title:hover {
+        color: $violet;
+        transition: all 300ms ease-in-out;
+
     }
 
     &__desc {
