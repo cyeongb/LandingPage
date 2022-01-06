@@ -553,7 +553,34 @@ button:hover,
 .article__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(18.75rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 40em) {
+  .article__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .article__grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.article__image {
+  height: 20rem;
+  width: 18.75rem;
+  border: 1px solid blue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.article__text {
+  border: 1px solid red;
 }
 /*# sourceMappingURL=style.css.map */
