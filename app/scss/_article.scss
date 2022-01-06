@@ -66,6 +66,8 @@
 
     &__title {
         font-size: $font-mdslg;
+        line-height: 1.15;
+        //line-height: 1을 원래사이즈  기준으로 함.
         color: $darkGray;
         padding: 0.3rem 0 1rem 0;
     }

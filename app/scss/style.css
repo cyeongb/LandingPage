@@ -607,6 +607,7 @@ button:hover,
 
 .article__title {
   font-size: 1.875rem;
+  line-height: 1.15;
   color: #3F3C3C;
   padding: 0.3rem 0 1rem 0;
 }
