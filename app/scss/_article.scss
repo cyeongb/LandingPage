@@ -6,31 +6,41 @@
     &__content {}
 
     &__grid {
+
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+        // grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
         // min width(15rem), max width(1fr)에 대해 auto 조정.
 
-        // grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
         // fr : fracture
         // mobile은 1 column
 
-        // @include breakpoint-up(medium) {
-        //     grid-template-columns: repeat(2, 1fr);
-        //     // 각각의 unit으로 2개의 column을 만듭니다
-        //     // tablet
-        // }
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+            //     // 각각의 unit으로 2개의 column을 만듭니다
+            //     // tablet
+        }
 
-        // @include breakpoint-up(large) {
-        //     grid-template-columns: repeat(4, 1fr);
-        //     // desk-top
-        // }
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
+            //     // desk-top
+        }
     }
 
     &__item {}
 
-    &__image {}
+    &__image {
+        height: 20rem;
+        width: 18.75rem;
+        border: 1px solid blue;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 
-    &__text {}
+    &__text {
+        border: 1px solid red;
+    }
 
     &__author {}
 
