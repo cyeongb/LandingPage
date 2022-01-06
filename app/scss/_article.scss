@@ -27,19 +27,32 @@
         }
     }
 
-    &__item {}
+    &__item {
+        // margin: 1rem;
+        border-radius: 0.4rem;
+        overflow: hidden;
+    }
 
     &__image {
         height: 20rem;
         width: 18.75rem;
-        border: 1px solid blue;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        border-radius: 3.125rem;
     }
 
     &__text {
-        border: 1px solid red;
+        //mobile
+        padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+
+        //tablet
+        @include breakpoint-up(medium) {
+            padding: 1.5rem 2.5rem;
+        }
+
+        color:gray;
+        text-align: left;
     }
 
     &__author {}

@@ -571,16 +571,29 @@ button:hover,
   }
 }
 
+.article__item {
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
 .article__image {
   height: 20rem;
   width: 18.75rem;
-  border: 1px solid blue;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  border-radius: 3.125rem;
 }
 
 .article__text {
-  border: 1px solid red;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  color: gray;
+  text-align: left;
+}
+
+@media (min-width: 40em) {
+  .article__text {
+    padding: 1.5rem 2.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
