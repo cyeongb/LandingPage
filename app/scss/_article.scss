@@ -3,7 +3,11 @@
 }
 
 .article {
-    &__content {}
+    &__content {
+        &__subtitle {
+            margin-bottom: 4rem;
+        }
+    }
 
     &__grid {
 
@@ -51,13 +55,24 @@
             padding: 1.5rem 2.5rem;
         }
 
-        color:gray;
+        // color:gray;
         text-align: left;
     }
 
-    &__author {}
+    &__author {
+        font-size: $font-smmd;
+        color: $lightViolet;
+    }
 
-    &__title {}
+    &__title {
+        font-size: $font-mdslg;
+        color: $darkGray;
+        padding: 0.3rem 0 1rem 0;
+    }
 
-    &__desc {}
+    &__desc {
+        font-size: 1.125rem;
+        color: $gray;
+
+    }
 }
