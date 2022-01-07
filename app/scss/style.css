@@ -1,14 +1,14 @@
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -154,20 +154,20 @@ p {
 
 .flex-jc-sb {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .flex-jc-c {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .flex-ai-c {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 button,
@@ -211,22 +211,22 @@ button:hover,
 }
 
 .header__logo img {
-  width: 9rem;
-  height: 1.75rem;
+  width: 10rem;
+  height: 2rem;
 }
 
-.header.open .header__toggle > span:first-child {
+.header.open .header__toggle>span:first-child {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.header.open .header__toggle > span:nth-child(2) {
+.header.open .header__toggle>span:nth-child(2) {
   opacity: 0;
 }
 
-.header.open .header__toggle > span:last-child {
+.header.open .header__toggle>span:last-child {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .header .overlay {
@@ -249,7 +249,7 @@ button:hover,
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   -webkit-transform-origin: 2.5px 1px;
-          transform-origin: 2.5px 1px;
+  transform-origin: 2.5px 1px;
 }
 
 .header__toggle span:not(:last-child) {
@@ -264,7 +264,7 @@ button:hover,
   width: calc(100% - 3rem);
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   background: #ffffff;
 }
 
@@ -323,8 +323,8 @@ button:hover,
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -341,12 +341,12 @@ button:hover,
 @media (min-width: 64em) {
   .hero__image {
     -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+    -ms-flex: 3;
+    flex: 3;
     height: 35rem;
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     background: url("../../images/easybank_back_pc.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -362,11 +362,11 @@ button:hover,
 @media (min-width: 64em) {
   .hero__text {
     -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+    -ms-flex: 2;
+    flex: 2;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     text-align: left;
   }
 }
@@ -380,10 +380,12 @@ button:hover,
     visibility: hidden;
     opacity: 0;
   }
+
   1% {
     visibility: visible;
     opacity: 0;
   }
+
   to {
     visibility: visible;
     opacity: 1;
@@ -395,10 +397,12 @@ button:hover,
     visibility: hidden;
     opacity: 0;
   }
+
   1% {
     visibility: visible;
     opacity: 0;
   }
+
   to {
     visibility: visible;
     opacity: 1;
@@ -407,7 +411,7 @@ button:hover,
 
 .fade-in {
   -webkit-animation: fade-in 250ms ease-in-out forwards;
-          animation: fade-in 250ms ease-in-out forwards;
+  animation: fade-in 250ms ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {
@@ -415,10 +419,12 @@ button:hover,
     visibility: visible;
     opacity: 1;
   }
+
   99% {
     visibility: visible;
     opacity: 0;
   }
+
   to {
     visibility: hidden;
     opacity: 0;
@@ -430,10 +436,12 @@ button:hover,
     visibility: visible;
     opacity: 1;
   }
+
   99% {
     visibility: visible;
     opacity: 0;
   }
+
   to {
     visibility: hidden;
     opacity: 0;
@@ -442,7 +450,7 @@ button:hover,
 
 .fade-out {
   -webkit-animation: fade-out 250ms ease-in-out forwards;
-          animation: fade-out 250ms ease-in-out forwards;
+  animation: fade-out 250ms ease-in-out forwards;
 }
 
 .feature {
@@ -482,7 +490,7 @@ button:hover,
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -493,16 +501,16 @@ button:hover,
 @media (min-width: 40em) {
   .feature__item {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
   }
 }
 
 @media (min-width: 64em) {
   .feature__item {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
   }
 }
 
@@ -560,20 +568,20 @@ button:hover,
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 40em) {
   .article__grid {
     -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 64em) {
   .article__grid {
     -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -593,7 +601,7 @@ button:hover,
 
 .article__image:hover {
   -webkit-box-shadow: 0 0 0 3px #680DC2 inset;
-          box-shadow: 0 0 0 3px #680DC2 inset;
+  box-shadow: 0 0 0 3px #680DC2 inset;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -637,4 +645,9 @@ button:hover,
   font-size: 1.125rem;
   color: #666363;
 }
+
+.footer {
+  background: #666363;
+}
+
 /*# sourceMappingURL=style.css.map */
