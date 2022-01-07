@@ -591,6 +591,13 @@ button:hover,
   border-radius: 3.125rem;
 }
 
+@media (max-width: 63.9375em) {
+  .article__image {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
 .article__image:hover {
   -webkit-box-shadow: 0 0 0 3px #680DC2 inset;
           box-shadow: 0 0 0 3px #680DC2 inset;
