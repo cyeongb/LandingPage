@@ -1,5 +1,139 @@
 .footer {
     background: $gray;
+    color: $white;
+    text-align: center;
+    padding: 2.5rem 0;
 
-    &__logo {}
+    @include breakpoint-up(large) {
+        //desk-top
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 2fr;
+        // last column은 2fr만큼의 width를 차지한다.
+        grid-template-rows: repeat(2, 1fr); // 위 아래로 (row)나누기 위해 사용
+        grid-template-areas:
+            "logo links1 links2 cta"
+            "social links1 links2 copyright"
+        ;
+        //area 가 맨 위 좌측부터 우측으로, 위에서 밑으로 1,2,3..이렇게 순서인데, 원하는 순서대로 view에 나타나게 하기 위해 사용.
+        //row별로 따로 area를 나눈다. 
+        // area구분하는 기준은 grid-area로 명명된 이름이 기준.
+        // justify-items: start;
+    }
+
+    &__logo {
+        display: inline-block;
+
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.8rem;
+        }
+
+        @include breakpoint-up(large) {
+            grid-area: logo;
+        }
+    }
+
+    &__social {
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.8rem;
+        }
+
+        @include breakpoint-up(large) {
+            grid-area: social;
+        }
+
+        a {
+            display: inline-block;
+
+            img {
+                width: 1.6rem;
+            }
+
+        }
+
+        a:not(:last-child) {
+            margin-right: 1.2rem;
+
+        }
+
+    }
+
+    .facebook {
+        position: relative;
+        top: 0.25rem;
+    }
+
+    .twitter {
+        position: relative;
+        top: 0.2rem;
+    }
+
+    .youtube {
+        position: relative;
+        top: 1px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 2.25;
+        font-size: $font-smmd;
+
+        @include breakpoint-up(large) {
+            align-items: start;
+
+        }
+
+        &.col1 {
+            @include breakpoint-up(large) {
+                grid-area: links1;
+                margin-left: 2rem;
+            }
+
+            a {
+                color: $veryLightGray;
+            }
+        }
+
+        &.col2 {
+            @include breakpoint-up(large) {
+                grid-area: links2;
+            }
+
+            @include breakpoint-down(medium) {
+                margin-bottom: 1.8rem;
+            }
+
+            a {
+                color: $veryLightGray;
+
+            }
+
+            margin-bottom: 1.8rem;
+        }
+    }
+
+    &__cta {
+        @include breakpoint-up(large) {
+            grid-area: cta;
+        }
+
+        @include breakpoint-down(medium) {
+            margin-bottom: 3rem;
+        }
+
+        a.button {}
+
+
+    }
+
+    &__copyright {
+        color: $veryLightGray;
+        font-size: $font-sm;
+
+        @include breakpoint-up(large) {
+            grid-area: copyright;
+        }
+
+    }
 }
