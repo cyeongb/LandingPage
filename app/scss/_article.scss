@@ -46,6 +46,11 @@
         background-repeat: no-repeat;
         background-position: center center;
         border-radius: 3.125rem;
+
+        @include breakpoint-down(medium) {
+            width: 16rem;
+            height: 16rem;
+        }
     }
 
     &__image:hover {
